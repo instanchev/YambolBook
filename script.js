@@ -1,11 +1,11 @@
 // public/js/script.js
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     // Публикуване на пост
     const postButton = document.querySelector(".post-form button");
     const postTextArea = document.querySelector(".post-form textarea");
-
-    postButton.addEventListener("click", function() {
+    
+    postButton.addEventListener("click", function () {
         const postContent = postTextArea.value.trim();
 
         if (postContent) {
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
             newPost.innerHTML = `
                 <div class="post-header">
                     <img src="https://via.placeholder.com/40" alt="User" class="post-avatar">
-                    <span class="post-user-name">Твоето име</span>
+                    <span class="post-user-name">Иван Петров</span>
                 </div>
                 <div class="post-content">
                     <p>${postContent}</p>
@@ -27,9 +27,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 </div>
             `;
 
-            postContainer.prepend(newPost); // Публикуваме новия пост
-            postTextArea.value = ""; // Изчистваме полето за текст
+            postContainer.prepend(newPost);
+            postTextArea.value = "";
         } else {
             alert("Моля, въведете съдържание!");
         }
-   
+    });
+});
