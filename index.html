@@ -1,80 +1,40 @@
 <!DOCTYPE html>
-<html lang="bg">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YambolBook</title>
-    <link rel="stylesheet" href="public/css/style.css">
-    <script defer src="public/js/script.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <!-- Навигационен бар -->
     <header>
-        <div class="header-container">
-            <div class="logo">
-                <h1>YambolBook</h1>
-            </div>
-            <nav>
-                <input type="text" placeholder="Търси...">
-                <a href="profile.html">Профил</a>
-                <a href="notifications.html">Известия</a>
-                <a href="logout.html">Изход</a>
-            </nav>
-        </div>
+        <h1>YambolBook</h1>
+        <nav>
+            <button id="login-btn">Вход</button>
+            <button id="register-btn">Регистрация</button>
+        </nav>
     </header>
-
-    <!-- Сайдбар -->
-    <aside class="sidebar">
-        <div class="menu-item">Начало</div>
-        <div class="menu-item">Приятели</div>
-        <div class="menu-item">Групи</div>
-        <div class="menu-item">Събития</div>
-        <div class="menu-item">Повече</div>
-    </aside>
-
-    <!-- Основен контейнер с новини и публикации -->
     <main>
-        <section class="news-feed">
-            <div class="profile-banner">
-                <img src="https://via.placeholder.com/1200x400" alt="Cover Photo" class="cover-photo">
-                <div class="profile-info">
-                    <img src="https://via.placeholder.com/80" alt="Profile Photo" class="profile-photo">
-                    <h2>Иван Петров</h2>
-                    <p>Добре дошъл в YambolBook!</p>
-                </div>
+        <section id="feed">
+            <h2>Публикации</h2>
+            <div class="post">
+                <img src="image1.jpg" alt="Публикация 1">
+                <p>Това е примерна публикация със снимка.</p>
             </div>
-
-            <div class="post-form">
-                <textarea placeholder="Какво мислиш днес?"></textarea>
-                <input type="file" id="file-upload" style="display: none;">
-                <button onclick="document.getElementById('file-upload').click();">Прикачи снимка</button>
-                <button>Публикувай</button>
-            </div>
-
-            <div class="posts">
-                <div class="post">
-                    <div class="post-header">
-                        <img src="https://via.placeholder.com/40" alt="User" class="post-avatar">
-                        <span class="post-user-name">Иван Петров</span>
-                    </div>
-                    <div class="post-content">
-                        <p>Това е моята първа публикация в YambolBook!</p>
-                    </div>
-                    <div class="post-footer">
-                        <button>Харесвам</button>
-                        <button>Коментари</button>
-                    </div>
-                </div>
-                <!-- Допълнителни публикации -->
+            <div class="post">
+                <img src="image2.jpg" alt="Публикация 2">
+                <p>Още една примерна публикация.</p>
             </div>
         </section>
+        <section id="chat">
+            <h2>Чат с "Ще ти помогна с каквото трябва"</h2>
+            <div id="chat-box">
+                <div class="message bot">Привет! Как мога да ти помогна?</div>
+            </div>
+            <input type="text" id="user-input" placeholder="Напиши въпрос..." />
+            <button id="send-btn">Изпрати</button>
+        </section>
     </main>
-
-    <!-- Футър -->
-    <footer>
-        <p>&copy; 2025 YambolBook. Всички права запазени.</p>
-    </footer>
-
+    <script src="script.js"></script>
 </body>
 </html>
