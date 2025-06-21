@@ -1,6 +1,6 @@
 /* public/css/style.css */
 
-/* Основни стилове */
+/* Общи стилове */
 * {
     margin: 0;
     padding: 0;
@@ -14,45 +14,41 @@ body {
     line-height: 1.6;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
 /* Хедър */
 header {
     background-color: #3b5998;
-    padding: 10px 20px;
+    padding: 15px 20px;
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 header .logo h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
-header .nav {
+header nav {
     display: flex;
     align-items: center;
 }
 
 header input {
     padding: 8px;
+    margin-right: 20px;
     border-radius: 5px;
     border: 1px solid #ccc;
-    margin-right: 20px;
 }
 
 header a {
     background-color: #fff;
-    padding: 10px 15px;
+    padding: 10px 20px;
     border-radius: 5px;
     color: #3b5998;
-    font-weight: bold;
     margin-left: 10px;
-    transition: background-color 0.3s ease;
+    text-decoration: none;
+    transition: background-color 0.3s;
 }
 
 header a:hover {
@@ -61,20 +57,21 @@ header a:hover {
 
 /* Сайдбар */
 .sidebar {
-    background-color: #fff;
     width: 250px;
+    background-color: #fff;
     height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
     padding-top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar .menu-item {
     padding: 15px;
-    border-bottom: 1px solid #ddd;
     text-align: center;
     cursor: pointer;
+    border-bottom: 1px solid #ddd;
 }
 
 .sidebar .menu-item:hover {
@@ -94,13 +91,47 @@ main {
     border-radius: 8px;
 }
 
+.profile-banner {
+    position: relative;
+}
+
+.cover-photo {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.profile-info {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+}
+
+.profile-info .profile-photo {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+}
+
+.profile-info h2 {
+    font-size: 2rem;
+}
+
+.profile-info p {
+    font-size: 1rem;
+}
+
+/* Публикуване на нови постове */
 .post-form textarea {
     width: 100%;
-    height: 100px;
     padding: 10px;
-    margin-bottom: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    height: 100px;
+    margin-bottom: 10px;
 }
 
 .post-form button {
@@ -110,7 +141,7 @@ main {
     border-radius: 5px;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    margin-right: 10px;
 }
 
 .post-form button:hover {
@@ -122,7 +153,7 @@ main {
 }
 
 .post {
-    background-color: #f9f9f9;
+    background-color: #fff;
     padding: 15px;
     margin-bottom: 15px;
     border-radius: 8px;
@@ -132,7 +163,6 @@ main {
 .post-header {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
 }
 
 .post-avatar {
@@ -146,10 +176,14 @@ main {
     font-weight: bold;
 }
 
+.post-content {
+    margin-top: 10px;
+}
+
 .post-footer {
+    margin-top: 10px;
     display: flex;
     justify-content: space-between;
-    margin-top: 10px;
 }
 
 .post-footer button {
@@ -158,7 +192,7 @@ main {
     padding: 5px 15px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
 }
 
 .post-footer button:hover {
@@ -172,18 +206,3 @@ footer {
     margin-top: 20px;
 }
 
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .sidebar {
-        width: 200px;
-    }
-
-    main {
-        margin-left: 0;
-        padding: 10px;
-    }
-}
