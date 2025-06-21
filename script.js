@@ -1,36 +1,63 @@
-// public/js/script.js
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
 
-document.addEventListener("DOMContentLoaded", function () {
-    // Публикуване на пост
-    const postButton = document.querySelector(".post-form button");
-    const postTextArea = document.querySelector(".post-form textarea");
-    
-    postButton.addEventListener("click", function () {
-        const postContent = postTextArea.value.trim();
+header {
+    background-color: #4267B2;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
 
-        if (postContent) {
-            const postContainer = document.querySelector(".posts");
-            const newPost = document.createElement("div");
-            newPost.classList.add("post");
+nav button {
+    margin: 5px;
+    padding: 10px;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
 
-            newPost.innerHTML = `
-                <div class="post-header">
-                    <img src="https://via.placeholder.com/40" alt="User" class="post-avatar">
-                    <span class="post-user-name">Иван Петров</span>
-                </div>
-                <div class="post-content">
-                    <p>${postContent}</p>
-                </div>
-                <div class="post-footer">
-                    <button>Харесвам</button>
-                    <button>Коментари</button>
-                </div>
-            `;
+main {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
 
-            postContainer.prepend(newPost);
-            postTextArea.value = "";
-        } else {
-            alert("Моля, въведете съдържание!");
-        }
-    });
-});
+#feed, #chat {
+    width: 45%;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.post img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+#chat-box {
+    height: 300px;
+    overflow-y: scroll;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#user-input {
+    width: 80%;
+    padding: 10px;
+    margin-right: 5px;
+}
+
+#send-btn {
+    padding: 10px;
+    background-color: #4267B2;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
