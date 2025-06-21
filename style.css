@@ -1,208 +1,63 @@
-/* public/css/style.css */
-
-/* Общи стилове */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f2f5;
-    color: #333;
-    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
 }
 
-/* Хедър */
 header {
-    background-color: #3b5998;
-    padding: 15px 20px;
+    background-color: #4267B2;
     color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-header .logo h1 {
-    font-size: 2.5rem;
-}
-
-header nav {
-    display: flex;
-    align-items: center;
-}
-
-header input {
-    padding: 8px;
-    margin-right: 20px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-header a {
-    background-color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    color: #3b5998;
-    margin-left: 10px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-}
-
-header a:hover {
-    background-color: #e4e6eb;
-}
-
-/* Сайдбар */
-.sidebar {
-    width: 250px;
-    background-color: #fff;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding-top: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.sidebar .menu-item {
-    padding: 15px;
+    padding: 10px;
     text-align: center;
-    cursor: pointer;
-    border-bottom: 1px solid #ddd;
 }
 
-.sidebar .menu-item:hover {
-    background-color: #f1f2f5;
-}
-
-/* Новини и публикации */
-main {
-    margin-left: 270px;
-    padding: 20px;
-}
-
-.news-feed {
+nav button {
+    margin: 5px;
+    padding: 10px;
     background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
 }
 
-.profile-banner {
-    position: relative;
+main {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
 }
 
-.cover-photo {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
+#feed, #chat {
+    width: 45%;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.post img {
+    max-width: 100%;
     border-radius: 10px;
 }
 
-.profile-info {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    color: white;
-}
-
-.profile-info .profile-photo {
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    margin-right: 15px;
-}
-
-.profile-info h2 {
-    font-size: 2rem;
-}
-
-.profile-info p {
-    font-size: 1rem;
-}
-
-/* Публикуване на нови постове */
-.post-form textarea {
-    width: 100%;
-    padding: 10px;
+#chat-box {
+    height: 300px;
+    overflow-y: scroll;
     border: 1px solid #ddd;
-    border-radius: 5px;
-    height: 100px;
+    padding: 10px;
     margin-bottom: 10px;
 }
 
-.post-form button {
-    background-color: #3b5998;
+#user-input {
+    width: 80%;
+    padding: 10px;
+    margin-right: 5px;
+}
+
+#send-btn {
+    padding: 10px;
+    background-color: #4267B2;
     color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
     border: none;
     cursor: pointer;
-    margin-right: 10px;
 }
-
-.post-form button:hover {
-    background-color: #2d4373;
-}
-
-.posts {
-    margin-top: 20px;
-}
-
-.post {
-    background-color: #fff;
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.post-header {
-    display: flex;
-    align-items: center;
-}
-
-.post-avatar {
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-}
-
-.post-user-name {
-    font-weight: bold;
-}
-
-.post-content {
-    margin-top: 10px;
-}
-
-.post-footer {
-    margin-top: 10px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.post-footer button {
-    background-color: #e4e6eb;
-    border: none;
-    padding: 5px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.post-footer button:hover {
-    background-color: #d0d3d8;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #f1f2f6;
-    margin-top: 20px;
-}
-
