@@ -1,8 +1,20 @@
-// Скрипт, който показва съобщение при натискане на бутон
-document.getElementById("infoBtn").addEventListener("click", function() {
-    alert("Ямбол е известен с богатата си история!");
+// public/js/script.js
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Ако има някакви събития, които трябва да се изпълнят при зареждането на страницата, тук можем да ги добавим
+
+    // Пример за анимация на бутоните
+    const ctaButtons = document.querySelectorAll('.cta-btn');
+    
+    ctaButtons.forEach(button => {
+        button.addEventListener('mouseover', function() {
+            button.style.transform = 'scale(1.1)';
+        });
+
+        button.addEventListener('mouseout', function() {
+            button.style.transform = 'scale(1)';
+        });
+    });
+
+    // Може да добавим още JavaScript функционалности тук
 });
-
-
-
-// Това е прост скрипт, който показва съобщение при натискане на бутон
