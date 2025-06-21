@@ -4,24 +4,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YambolBook - Начална страница</title>
+    <title>YambolBook</title>
     <link rel="stylesheet" href="public/css/style.css">
+    <script defer src="public/js/script.js"></script>
 </head>
 <body>
+
+    <!-- Хедър -->
     <header>
-        <h1>Добре дошли в YambolBook!</h1>
-        <p>Най-доброто място за свързване с приятели и споделяне на спомени.</p>
+        <div class="logo">
+            <h1>YambolBook</h1>
+        </div>
+        <nav class="nav">
+            <input type="text" placeholder="Търси...">
+            <a href="profile.html">Профил</a>
+            <a href="logout.html">Изход</a>
+        </nav>
     </header>
 
-    <div class="main-content">
-        <a href="signup.html" class="cta-btn">Регистрация</a>
-        <a href="login.html" class="cta-btn">Вход</a>
-    </div>
+    <!-- Лента за навигация -->
+    <aside class="sidebar">
+        <div class="menu-item">Начало</div>
+        <div class="menu-item">Приятели</div>
+        <div class="menu-item">Събития</div>
+        <div class="menu-item">Групи</div>
+        <div class="menu-item">Повече</div>
+    </aside>
+
+    <!-- Основен контейнер за новини -->
+    <main>
+        <section class="news-feed">
+            <div class="post-form">
+                <textarea placeholder="Какво мислиш днес?"></textarea>
+                <button>Публикувай</button>
+            </div>
+
+            <div class="posts">
+                <div class="post">
+                    <div class="post-header">
+                        <img src="https://via.placeholder.com/40" alt="User" class="post-avatar">
+                        <span class="post-user-name">Иван Петров</span>
+                    </div>
+                    <div class="post-content">
+                        <p>Това е моята първа публикация в YambolBook!</p>
+                    </div>
+                    <div class="post-footer">
+                        <button>Харесвам</button>
+                        <button>Коментари</button>
+                    </div>
+                </div>
+                <!-- Повече публикации... -->
+            </div>
+        </section>
+    </main>
 
     <footer>
         <p>&copy; 2025 YambolBook. Всички права запазени.</p>
     </footer>
 
-    <script src="public/js/script.js"></script>
 </body>
 </html>
