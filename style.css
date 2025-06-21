@@ -1,68 +1,189 @@
 /* public/css/style.css */
 
-/* Общи стилове */
-body {
-    font-family: Arial, sans-serif;
+/* Основни стилове */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
     background-color: #f0f2f5;
     color: #333;
+    line-height: 1.6;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Хедър */
 header {
     background-color: #3b5998;
+    padding: 10px 20px;
     color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo h1 {
+    font-size: 2rem;
+}
+
+header .nav {
+    display: flex;
+    align-items: center;
+}
+
+header input {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 20px;
+}
+
+header a {
+    background-color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: #3b5998;
+    font-weight: bold;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+header a:hover {
+    background-color: #e4e6eb;
+}
+
+/* Сайдбар */
+.sidebar {
+    background-color: #fff;
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+}
+
+.sidebar .menu-item {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
     text-align: center;
-    padding: 40px 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
 
-header h1 {
-    font-size: 36px;
-    margin: 0;
+.sidebar .menu-item:hover {
+    background-color: #f1f2f5;
 }
 
-header p {
-    font-size: 18px;
+/* Новини и публикации */
+main {
+    margin-left: 270px;
+    padding: 20px;
 }
 
-.main-content {
-    text-align: center;
-    margin-top: 50px;
+.news-feed {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
-.cta-btn {
+.post-form textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.post-form button {
     background-color: #3b5998;
     color: white;
-    padding: 15px 30px;
+    padding: 10px 20px;
     border-radius: 5px;
-    text-decoration: none;
-    font-size: 18px;
-    margin: 10px;
-    display: inline-block;
-    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.cta-btn:hover {
+.post-form button:hover {
     background-color: #2d4373;
+}
+
+.posts {
+    margin-top: 20px;
+}
+
+.post {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.post-avatar {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.post-user-name {
+    font-weight: bold;
+}
+
+.post-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.post-footer button {
+    background-color: #e4e6eb;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.post-footer button:hover {
+    background-color: #d0d3d8;
 }
 
 footer {
     text-align: center;
-    margin-top: 50px;
     padding: 20px;
     background-color: #f1f2f6;
-    font-size: 14px;
+    margin-top: 20px;
 }
 
-/* Адаптивност */
-@media screen and (max-width: 768px) {
-    header h1 {
-        font-size: 28px;
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-    .cta-btn {
-        font-size: 16px;
-        padding: 12px 25px;
+    .sidebar {
+        width: 200px;
+    }
+
+    main {
+        margin-left: 0;
+        padding: 10px;
     }
 }
