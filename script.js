@@ -1,20 +1,35 @@
 // public/js/script.js
 
 document.addEventListener("DOMContentLoaded", function() {
-    // Ако има някакви събития, които трябва да се изпълнят при зареждането на страницата, тук можем да ги добавим
+    // Публикуване на пост
+    const postButton = document.querySelector(".post-form button");
+    const postTextArea = document.querySelector(".post-form textarea");
 
-    // Пример за анимация на бутоните
-    const ctaButtons = document.querySelectorAll('.cta-btn');
-    
-    ctaButtons.forEach(button => {
-        button.addEventListener('mouseover', function() {
-            button.style.transform = 'scale(1.1)';
-        });
+    postButton.addEventListener("click", function() {
+        const postContent = postTextArea.value.trim();
 
-        button.addEventListener('mouseout', function() {
-            button.style.transform = 'scale(1)';
-        });
-    });
+        if (postContent) {
+            const postContainer = document.querySelector(".posts");
+            const newPost = document.createElement("div");
+            newPost.classList.add("post");
 
-    // Може да добавим още JavaScript функционалности тук
-});
+            newPost.innerHTML = `
+                <div class="post-header">
+                    <img src="https://via.placeholder.com/40" alt="User" class="post-avatar">
+                    <span class="post-user-name">Твоето име</span>
+                </div>
+                <div class="post-content">
+                    <p>${postContent}</p>
+                </div>
+                <div class="post-footer">
+                    <button>Харесвам</button>
+                    <button>Коментари</button>
+                </div>
+            `;
+
+            postContainer.prepend(newPost); // Публикуваме новия пост
+            postTextArea.value = ""; // Изчистваме полето за текст
+        } else {
+            alert("Моля, въведете съдържание!");
+        }
+   
